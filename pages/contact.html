@@ -145,7 +145,87 @@
 //*********************************************************************************	
 							// get values by id function
 					
+	var $ = function (id) {
+    					return document.getElementById(id);
+					}
+						
+// validation, checking all fields: if all isValid = true, then ok to submit infos
+						
+ 							var submitInfo = function () {
+ 
+								var isValid = true;
+								
+					//Check first name field
+								if ($("Fname").value == "") {
+									$("Fname_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("Fname_error").firstChild.nodeValue = "";
+								}  
+					//Check last name field
+								if ($("Lname").value == "") {
+									$("Lname_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("Lname_error").firstChild.nodeValue = "";
+								}  
+					//Check email field
+									if ($("email").value == "") {
+									$("email_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("email_error").firstChild.nodeValue = "";
+								}  
+					//check url field
+								if ($("url").value == "") {
+									$("url_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("url_error").firstChild.nodeValue = "";
+								}  
+					//check adress field
+								if ($("mailAddie").value == "") {
+									$("adress_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("adress_error").firstChild.nodeValue = "";
+								}  
+					//check city field
+								if ($("city").value == "") {
+									$("city_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("city_error").firstChild.nodeValue = "";
+								}  
 			
+					//State validation
+								if ($("state").value == "") {
+									$("state_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("state_error").firstChild.nodeValue = "";
+								}  
+					//Zip validation
+								if ($("zip").value == "") {
+									$("zip_error").firstChild.nodeValue = "This field is required.";
+									isValid = false;
+								} else {
+									$("zip_error").firstChild.nodeValue = "";
+								}
+
+
+	
+	
+								//Submit form OK to submit Note: cant call button submit, it will overide JS
+								if (isValid) {
+									$("contactInfo").submit(); 
+								}
+							}
+								
+								//Submit  on click of button
+								window.onload = function () {
+  								  $("getit").onclick = submitInfo;
+							}-->		
 						
 					
 </script> 
