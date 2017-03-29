@@ -169,6 +169,73 @@ main {
 		margin: 1em 5% 1em 2.5%;
 	}
 	
+	#moveright {
+		margin-left: 4em;
+	}
+	
+	/* slide show CONTACT PAGE*/
+section {
+	width: 80%; 
+	float: right;
+	}
+	
+			aside {
+		width: 80px;    		float: left;
+		} 
+
+
+#slideshow ul {
+	animation: slideshow 15s infinite alternate;
+}
+@keyframes slideshow {
+    0%		{left:    0%;}
+    10%		{left:    0%;}
+    20%		{left: -100%;}
+    30%		{left: -100%;}
+    40%		{left: -200%;}
+    50%		{left: -200%;}
+    60%		{left: -300%;}
+    70%		{left: -300%;}
+    80%		{left: -400%;}
+    90%		{left: -400%;}
+    100%	{left: -400%;}
+}
+
+#slideshow {
+    overflow:hidden;	
+}
+#slideshow h1 {
+	margin: 0 0 .25em;
+	padding: 0;
+}
+#slideshow ul {
+    list-style: none;
+	width: 500%;
+	margin:0;
+	padding:0;
+    position:relative;
+}
+#slideshow ul li {
+    width: 20%;
+    float: left;
+}
+#slideshow h2 {
+    color: blue;
+	font-size: 100%;
+}
+#slideshow img {
+	margin-top: 1.5em;
+	margin-left: 20%;
+	max-width: 60%;
+	height: auto;	
+	border: none;
+	border-radius: 1px;
+	float: none;
+}
+
+	
+	
+	
 /* 	Blend links on desktop view, the change in cursor will show them, turned back to blue on tablet and mobile device, see media query */
 	main a {
 	text-decoration: none;
@@ -310,8 +377,14 @@ main ol li ol {
 		padding: 1.25em 2.5% .5em 2.5%;
 	}
 	
-/* 	Form formatting */
+	.colChange:hover {
+		background: #dce2ea;
+		border-radius: 10px;
 
+	}
+	
+/* 	Form formatting */
+#form { clear: right;}
 .centerMe {
 	text-align: center;
 }
@@ -355,7 +428,7 @@ main ol li ol {
 
 	
 	/* submit button style, adjusted to be link to other page */
-#getit {
+#joinFormInfo {
 	text-align: center;
 	font-size: 110%;
 	background-color: #282828;
@@ -381,6 +454,28 @@ div.button {
 	padding: .25em .5em;
 
 }
+
+/* SLIDER */
+
+#wrapperslide {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#sliderVisual {
+	width: 100%;
+}
+#rating {
+	border: 0;
+	color: #1A1DE3;
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+#smaller {
+	font-size: 100%;
+}
+
 
 /* the styles for the google Form to make it responsive*/		
 /* the full width */
@@ -509,6 +604,10 @@ footer p a {
 	body { font-size: 90%; }
 	 
 	 	 /* adjust table size and hide first column on table project page on portrait view, still there on landscape view*/
+
+section {
+	width: 100%;
+	}
 
 	 	th, td {
 		padding: .3em .5em .3em .5em;
